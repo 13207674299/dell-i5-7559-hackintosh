@@ -25,7 +25,7 @@ cpu: i5 6300HQ
 ### 完善系统：
 [https://github.com/fengwenhua/dell-7559-hackintosh](https://github.com/fengwenhua/dell-7559-hackintosh)
 
-### uifi通用安装参考:
+### uefi通用安装参考:
 [https://www.bilibili.com/video/BV1fE411W7ei?from=search&seid=12025285269635744764](https://www.bilibili.com/video/BV1fE411W7ei?from=search&seid=12025285269635744764)
 
 ## 基础知识
@@ -36,9 +36,9 @@ cpu: i5 6300HQ
 
     回到正题，首先需要确定你的电脑/笔记本能不能装黑苹果，只讲几个不能装的例子，amd的cpu，可以装，但比intel难，n卡，可以装10.13以下的系统，这个不太确定具体是多少版本，至少10.14是一定装不了的，而且9系显卡之后也是没有驱动的，其他的自行百度。
 
-    然后需要有个u盘,如果是legacy模式安装黑苹果，需要有mac系统，可以用虚拟机，如果是uifi模式安装则只需要u盘。然后安装过程可以直接参考上面的UIFI通用安装参考就可以了。
+    然后需要有个u盘,如果是legacy模式安装黑苹果，需要有mac系统，可以用虚拟机，如果是uefi模式安装则只需要u盘。然后安装过程可以直接参考上面的UEFI通用安装参考就可以了。
 
-    由于本人的7559非常难用uifi进macos的安装页面，只能换legacy模式进行引导。
+    由于本人的7559非常难用uefi进macos的安装页面，只能换legacy模式进行引导。
 
 ## 制作引导盘
 
@@ -88,7 +88,7 @@ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallme
 
 ## 双系统设置
 
-    由于我这个机型本身比较奇葩，windows可以而且默认用uifi引导，而我之前把macos安装到机械硬盘，所以有两个efi分区，可以正常引导，但是我想把这两个系统用一个efi分区引导，折腾了好久，如果你本身windows是legacy引导的就直接把clover文件夹复制到windows原来的efi分区的efi文件夹中就好了，我自己的流程如下：
+    由于我这个机型本身比较奇葩，windows可以而且默认用uefi引导，而我之前把macos安装到机械硬盘，所以有两个efi分区，可以正常引导，但是我想把这两个系统用一个efi分区引导，折腾了好久，如果你本身windows是legacy引导的就直接把clover文件夹复制到windows原来的efi分区的efi文件夹中就好了，我自己的流程如下：
 
     在macos系统下，用clover configurator挂载efi分区，如图
 
